@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 import numpy as np
@@ -13,6 +14,19 @@ app = FastAPI(
     title="Cyber Threat Detection API",
     description="A PyTorch-powered API for detecting malicious system events.",
     version="1.0.0"
+)
+
+# ==========================================================
+# Enable CORS
+# ==========================================================
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://3aeb312f-febf-4aa9-9419-e8abd467cd23.lovableproject.com"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ==========================================================
@@ -88,9 +102,9 @@ def home():
 # ==========================================================
 @app.post("/predict")
 def predict(request: PredictionRequest):
-    
+
     print("=== PREDICT ENDPOINT CALLED ===")
-    
+
     # Collect the incoming features
     features = [
         request.userId,
