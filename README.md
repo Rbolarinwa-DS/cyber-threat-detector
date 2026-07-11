@@ -241,29 +241,34 @@ Example Response
 
 # Project Structure
 
-```
+```text
 cyber-threat-detector/
-
 │
-
 ├── app/
-│   └── main.py
+│   └── main.py                 # FastAPI application & inference endpoint
 │
 ├── data/
 │   ├── labelled_train.csv
 │   ├── labelled_validation.csv
 │   ├── labelled_test.csv
+│   └── labelled_training_data.csv
+│
+├── images/                    #includes homepage 
+│   ├── benign.png
+│   ├── malicious.png
+│   └── swagger.png
 │
 ├── models/
-│   ├── best_model.pth
-│   └── scaler.pkl
+│   ├── best_model.pth          # Trained PyTorch model
+│   └── scaler.pkl              # Serialized StandardScaler
 │
-├── requirements.txt
-├── runtime.txt
-└── README.md
+├── notebook.ipynb              # Model development & experimentation
+├── requirements.txt            # Python dependencies
+├── runtime.txt                 # Python version for Render
+├── .gitignore
+├── README.md
+└── LICENSE                     
 ```
-
----
 
 # Installation
 
