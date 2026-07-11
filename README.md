@@ -69,12 +69,6 @@ Instead of remaining a notebook-based ML project, the model has been deployed as
 
 # IMAGES
 
-## Homepage
-
-![Homepage](images/homepage.png)
-
----
-
 ## Benign Prediction
 
 ![Benign](images/benign.png)
