@@ -71,15 +71,11 @@ Instead of remaining a notebook-based ML project, the model has been deployed as
 
 ## Homepage
 
-
-
 ![Homepage](images/homepage.png)
 
 ---
 
 ## Benign Prediction
-
-
 
 ![Benign](images/benign.png)
 
@@ -87,15 +83,11 @@ Instead of remaining a notebook-based ML project, the model has been deployed as
 
 ## Malicious Prediction
 
-
-
 ![Malicious](images/malicious.png)
 
 ---
 
 ## Swagger Documentation
-
-
 
 ![Swagger](images/swagger.png)
 
