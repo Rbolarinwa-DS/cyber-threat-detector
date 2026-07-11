@@ -67,11 +67,11 @@ Instead of remaining a notebook-based ML project, the model has been deployed as
 
 ---
 
-# Screenshots
+# IMAGES
 
 ## Homepage
 
-> Replace with screenshot
+
 
 ![Homepage](images/homepage.png)
 
@@ -79,7 +79,7 @@ Instead of remaining a notebook-based ML project, the model has been deployed as
 
 ## Benign Prediction
 
-> Replace with screenshot
+
 
 ![Benign](images/benign.png)
 
@@ -87,7 +87,7 @@ Instead of remaining a notebook-based ML project, the model has been deployed as
 
 ## Malicious Prediction
 
-> Replace with screenshot
+
 
 ![Malicious](images/malicious.png)
 
@@ -95,7 +95,7 @@ Instead of remaining a notebook-based ML project, the model has been deployed as
 
 ## Swagger Documentation
 
-> Replace with screenshot
+
 
 ![Swagger](images/swagger.png)
 
