@@ -1,72 +1,135 @@
+<p align="center">
+
+<img src="images/banner.png" width="100%"/>
+
 # 🛡️ CyberGuard AI
-### End-to-End Machine Learning Cyber Threat Detection System
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.139-009688.svg)](https://fastapi.tiangolo.com/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.5-orange.svg)](https://pytorch.org/)
-[![Render](https://img.shields.io/badge/Deployment-Render-46E3B7.svg)](https://render.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+### AI-Powered Behavioral Cyber Threat Detection
 
----
+Detect malicious system events using a **PyTorch Neural Network** and receive real-time threat predictions through a modern web interface.
 
-## 🚀 Live Demo
+Built with **PyTorch**, **FastAPI**, **Render**, and **Lovable**.
 
-🌐 **Frontend**
+[🌐 Live Demo](https://cyber-guard-v1.lovable.app/) • [📖 API Docs](https://cyber-threat-detector-jafo.onrender.com/docs)
 
-https://cyberguard-ai-12.lovable.app
-
-📚 **API Documentation**
-
-https://cyber-threat-detector-jafo.onrender.com/docs
-
-⚡ **Backend API**
-
-https://cyber-threat-detector-jafo.onrender.com
+</p>
 
 ---
 
-# Overview
-
-CyberGuard AI is a production-ready Machine Learning system for detecting malicious operating system events in real time.
-
-The project combines:
-
-- PyTorch Neural Network
-- FastAPI REST API
-- Render Cloud Deployment
-- Interactive Swagger Documentation
-- Modern Lovable Frontend
-- Real-time inference
-
-Instead of remaining a notebook-based ML project, the model has been deployed as a complete web application capable of serving predictions through an API and an interactive frontend.
 
 ---
 
-# Features
+# 📸 Application Preview
 
-✅ End-to-end ML deployment
+## 🏠 Landing Page
 
-✅ PyTorch Neural Network inference
+<p align="center">
 
-✅ FastAPI backend
+<img src="images/home.png" width="100%"/>
 
-✅ Interactive Swagger API
+</p>
 
-✅ Real-time prediction dashboard
+---
 
-✅ Probability & confidence visualization
+## 🤖 Threat Analysis Dashboard
 
-✅ Threat classification
+<p align="center">
+
+<img src="images/analyze.png" width="100%"/>
+
+</p>
+
+---
+
+## 📊 Prediction Report
+
+<p align="center">
+
+<img src="images/result.png" width="100%"/>
+
+</p>
+
+---
+
+# 📖 Overview
+
+CyberGuard AI is an end-to-end Machine Learning application that analyzes structured operating system event features to classify activity as **Benign** or **Malicious**.
+
+The project demonstrates the complete Machine Learning Engineering lifecycle—from data preprocessing and neural network training to deployment through FastAPI, Render, and a modern Lovable frontend.
+
+---
+
+# 🚀 Features
+
+- 🧠 PyTorch Neural Network
+- ⚡ Real-Time Threat Detection
+- 📊 Confidence Score & Probability
+- 🎯 Decision Threshold Display
+- 🚀 FastAPI REST API
+- ☁️ Render Cloud Deployment
+- 💜 Modern Responsive UI
+- 📱 Mobile Friendly
+- 📖 Interactive API Documentation
+
+---
+
+# 💡 Why CyberGuard AI?
+
+Modern cyber threats evolve rapidly, making behavioral analysis an important complement to traditional signature-based detection.
+
+CyberGuard AI demonstrates how Machine Learning can assist security analysts by:
+
+- Performing real-time behavioral threat assessment
+- Providing confidence-based predictions
+- Exposing predictions through a production-ready REST API
+- Demonstrating end-to-end Machine Learning deployment
+
+CyberGuard AI is designed as an educational and research project showcasing practical ML Engineering principles.
+
+---
+
+# 📚 Dataset Summary
+
+**Dataset**
+
+BETH Cybersecurity Dataset
+
+The model was trained on structured operating system event data representing both benign and malicious behaviors.
+
+Selected features include:
+
+- User ID
+- Mount Namespace
+- Arguments Count
+- Operation Return Code
+
+Features were standardized using **StandardScaler** before training to ensure consistent inference performance.
+
+---
+
+# 📈 Model Performance
+
+| Metric | Score |
+|---------|-------|
+| Accuracy | **68.00%** |
+| Precision | **27.78%** |
+| Recall | **31.25%** |
+| F1 Score | **29.41%** |
+| Architecture | Feed-Forward Neural Network |
+| Framework | PyTorch |
+
+The model demonstrates an end-to-end deployment workflow for behavioral cyber threat detection.
+
+---
+
+# 🛡️ Prediction Classes
 
 - Benign
 - Malicious
 
-✅ Cloud deployment (Render)
-
-✅ Responsive frontend
-
 ---
 
+<<<<<<< HEAD
 # IMAGES
 
 ## Benign Prediction
@@ -155,12 +218,17 @@ Threat Classification
 ---
 
 # Tech Stack
+=======
+# 🏗️ Technology Stack
+>>>>>>> 32bc3cc (Update README images)
 
 ### Machine Learning
 
 - PyTorch
+- Scikit-learn
 - NumPy
-- Scikit-Learn
+- Pandas
+- Joblib
 
 ### Backend
 
@@ -171,20 +239,19 @@ Threat Classification
 ### Frontend
 
 - Lovable
+- React
+- TypeScript
+- Tailwind CSS
 
 ### Deployment
 
 - Render
 
-### Model Persistence
-
-- Joblib
-- PyTorch State Dict
-
 ---
 
-# Input Features
+# 📂 Project Structure
 
+<<<<<<< HEAD
 The deployed model currently predicts using four structured event features.
 
 | Feature | Description |
@@ -257,11 +324,20 @@ cyber-threat-detector/
 │   ├── benign.png
 │   ├── malicious.png
 │   └── swagger.png
+=======
+```text
+CyberGuard-AI/
+
+├── app/
+│   ├── main.py
+│   └── model.py
+>>>>>>> 32bc3cc (Update README images)
 │
 ├── models/
 │   ├── best_model.pth          # Trained PyTorch model
 │   └── scaler.pkl              # Serialized StandardScaler
 │
+<<<<<<< HEAD
 ├── notebook.ipynb              # Model development & experimentation
 ├── requirements.txt            # Python dependencies
 ├── runtime.txt                 # Python version for Render
@@ -271,13 +347,60 @@ cyber-threat-detector/
 ```
 
 # Installation
+=======
+├── images/
+│
+├── requirements.txt
+├── runtime.txt
+├── README.md
+└── LICENSE
+```
+
+---
+
+# 📡 API
+
+### Health Check
+
+```http
+GET /
+```
+
+### Prediction
+
+```http
+POST /predict
+```
+
+Input
+
+```json
+{
+  "userId": 1,
+  "mountNamespace": 2,
+  "argsNum": 3,
+  "returnValue": 0
+}
+```
+
+Returns
+
+```json
+{
+  "prediction": "Malicious",
+  "probability": 0.5137
+}
+```
+
+---
+
+# ⚙️ Run Locally
+>>>>>>> 32bc3cc (Update README images)
 
 Clone the repository
 
 ```bash
 git clone https://github.com/Rbolarinwa-DS/cyber-threat-detector.git
-
-cd cyber-threat-detector
 ```
 
 Install dependencies
@@ -286,13 +409,13 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run locally
+Run the API
 
 ```bash
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
 ```
 
-API available at
+Open
 
 ```
 http://127.0.0.1:8000/docs
@@ -300,67 +423,62 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# Deployment
+# ⚠️ Current Limitations
 
-Backend
+Although CyberGuard AI demonstrates a production-ready deployment workflow, there are still limitations.
 
-- FastAPI
-- Render Cloud
-
-Frontend
-
-- Lovable
-
----
-
-# Future Improvements
-
-- Add explainable AI (SHAP)
-- Support batch inference
-- Docker containerization
-- CI/CD with GitHub Actions
-- Authentication
-- Monitoring & logging
-- GPU inference support
-- Model versioning
-- Database logging
-- Threat history dashboard
+- Uses four structured input features
+- Educational proof-of-concept
+- Limited feature engineering
+- No user authentication
+- No prediction history
+- Not intended for production security environments
 
 ---
 
-# Skills Demonstrated
+# 🛣️ Roadmap
 
-- Machine Learning
-- Deep Learning
-- PyTorch
-- FastAPI
-- REST API Development
-- Model Deployment
-- Cloud Deployment
-- Backend Engineering
-- Feature Engineering
-- Model Serialization
-- Production Inference
-- Git
-- GitHub
-- API Documentation
+## ✅ Version 1.0
 
----
+- End-to-End Deployment
+- PyTorch Neural Network
+- FastAPI Backend
+- Render Deployment
+- Responsive Frontend
+- Live REST API
 
-# Author
+### 🚀 Version 2.0
 
-**Rbolarinwa**
-
-Computer Science Student | Machine Learning Engineer
-
-GitHub
-
-https://github.com/Rbolarinwa-DS
-
-Project Repository
-
-https://github.com/Rbolarinwa-DS/cyber-threat-detector
+- Docker Support
+- CI/CD Pipeline
+- User Authentication
+- Prediction History
+- Model Monitoring Dashboard
+- Explainable AI
+- Enhanced Feature Engineering
 
 ---
 
-## If you found this project interesting, consider giving it a ⭐
+# 📜 Disclaimer
+
+CyberGuard AI is intended for **educational, research, and demonstration purposes only.**
+
+Predictions generated by the model should complement—not replace—professional cybersecurity monitoring and incident response practices.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a **Star ⭐**.
+
+It helps support the project and motivates future development.
+
+---
+
+# 👨‍💻 Author
+
+**Rahman-Bolarinwa**
+
+Machine Learning Engineer • Data Scientist
+
+Building practical AI solutions from research to deployment.
