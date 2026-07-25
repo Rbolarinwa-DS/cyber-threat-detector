@@ -129,98 +129,7 @@ The model demonstrates an end-to-end deployment workflow for behavioral cyber th
 
 ---
 
-<<<<<<< HEAD
-# IMAGES
-
-## Benign Prediction
-
-![Benign](images/benign.png)
-
----
-
-## Malicious Prediction
-
-![Malicious](images/malicious.png)
-
----
-
-## Swagger Documentation
-
-![Swagger](images/swagger.png)
-
----
-
-# System Architecture
-
-```
-              User
-                │
-                ▼
-      Lovable Frontend
-                │
-         HTTP Request
-                │
-                ▼
-         FastAPI Backend
-                │
-        Feature Scaling
-                │
-                ▼
-      PyTorch Neural Network
-                │
-      Threat Probability
-                │
-                ▼
-      JSON API Response
-                │
-                ▼
-      Interactive Dashboard
-```
-
----
-
-# Machine Learning Pipeline
-
-```
-Raw System Event
-
-        │
-
-        ▼
-
-Feature Extraction
-
-        │
-
-        ▼
-
-StandardScaler
-
-        │
-
-        ▼
-
-PyTorch Neural Network
-
-        │
-
-        ▼
-
-Sigmoid Probability
-
-        │
-
-        ▼
-
-Threat Classification
-```
-
----
-
-# Tech Stack
-=======
 # 🏗️ Technology Stack
->>>>>>> 32bc3cc (Update README images)
 
 ### Machine Learning
 
@@ -251,103 +160,17 @@ Threat Classification
 
 # 📂 Project Structure
 
-<<<<<<< HEAD
-The deployed model currently predicts using four structured event features.
-
-| Feature | Description |
-|----------|-------------|
-| userId | User initiating the event |
-| mountNamespace | Namespace identifier |
-| argsNum | Number of arguments |
-| returnValue | Operation return code |
-
----
-
-# Prediction Response
-
-Example response
-
-```json
-{
-    "prediction": "Malicious",
-    "probability": 0.5436
-}
-```
-
----
-
-# API Usage
-
-## POST
-
-```
-/predict
-```
-
-Example Request
-
-```json
-{
-    "userId": 5,
-    "mountNamespace": 0,
-    "argsNum": 4,
-    "returnValue": 2
-}
-```
-
-Example Response
-
-```json
-{
-    "prediction": "Benign",
-    "probability": 0.3218
-}
-```
-
----
-
-# Project Structure
-
-```text
-cyber-threat-detector/
-│
-├── app/
-│   └── main.py                 # FastAPI application & inference endpoint
-│
-├── data/
-│   ├── labelled_train.csv
-│   ├── labelled_validation.csv
-│   ├── labelled_test.csv
-│   └── labelled_training_data.csv
-│
-├── images/                    #includes homepage 
-│   ├── benign.png
-│   ├── malicious.png
-│   └── swagger.png
-=======
 ```text
 CyberGuard-AI/
 
 ├── app/
 │   ├── main.py
 │   └── model.py
->>>>>>> 32bc3cc (Update README images)
 │
 ├── models/
 │   ├── best_model.pth          # Trained PyTorch model
 │   └── scaler.pkl              # Serialized StandardScaler
 │
-<<<<<<< HEAD
-├── notebook.ipynb              # Model development & experimentation
-├── requirements.txt            # Python dependencies
-├── runtime.txt                 # Python version for Render
-├── .gitignore
-├── README.md
-└── LICENSE                     
-```
-
-# Installation
-=======
 ├── images/
 │
 ├── requirements.txt
@@ -395,7 +218,6 @@ Returns
 ---
 
 # ⚙️ Run Locally
->>>>>>> 32bc3cc (Update README images)
 
 Clone the repository
 
