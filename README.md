@@ -21,16 +21,6 @@ Built with **PyTorch**, **FastAPI**, **Render**, and **Lovable**.
 
 # 📸 Application Preview
 
-## 🏠 Landing Page
-
-<p align="center">
-
-<img src="images/home.png" width="100%"/>
-
-</p>
-
----
-
 ## 🤖 Threat Analysis Dashboard
 
 <p align="center">
