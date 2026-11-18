@@ -1,106 +1,139 @@
+# 🛡️ Cyber Threat Detector
+
+### Machine Learning-Based Linux System-Event Classification
+
+A machine-learning project that uses a PyTorch neural network to classify structured Linux system-event records as **Benign** or **Malicious**.
+
+Built with **Python, PyTorch, Scikit-learn, FastAPI, Render, and React**.
+
 <p align="center">
-
-<img src="images/banner.png" width="100%"/>
-
-# 🛡️ CyberGuard AI
-
-### AI-Powered Behavioral Cyber Threat Detection
-
-Detect malicious system events using a **PyTorch Neural Network** and receive real-time threat predictions through a modern web interface.
-
-Built with **PyTorch**, **FastAPI**, **Render**, and **Lovable**.
-
-[🌐 Live Demo](https://cyber-guard-v1.lovable.app/) • [📖 API Docs](https://cyber-threat-detector-jafo.onrender.com/docs)
-
+  <a href="https://cyber-guard-v1.lovable.app/">🌐 Live Demo</a> •
+  <a href="https://cyber-threat-detector-jafo.onrender.com/docs">📖 API Documentation</a> •
+  <a href="https://github.com/Rbolarinwa-DS/cyber-threat-detector">💻 GitHub Repository</a>
 </p>
-
----
-
 
 ---
 
 # 📸 Application Preview
 
-## 🤖 Threat Analysis Dashboard
+## 🤖 System-Event Analysis Interface
 
 <p align="center">
-
-<img src="images/analyze.png" width="100%"/>
-
+  <img src="images/analyze.png" width="100%" alt="Cyber Threat Detector analysis interface"/>
 </p>
 
----
-
-## 📊 Prediction Report
+## 📊 Classification Results
 
 <p align="center">
-
-<img src="images/result.png" width="100%"/>
-
+  <img src="images/result.png" width="100%" alt="Cyber Threat Detector prediction report"/>
 </p>
 
 ---
 
 # 📖 Overview
 
-CyberGuard AI is an end-to-end Machine Learning application that analyzes structured operating system event features to classify activity as **Benign** or **Malicious**.
+**Cyber Threat Detector** is an end-to-end Machine Learning application focused on classifying structured Linux system-event records into two categories: **Benign** and **Malicious**.
 
-The project demonstrates the complete Machine Learning Engineering lifecycle—from data preprocessing and neural network training to deployment through FastAPI, Render, and a modern Lovable frontend.
+The project explores how machine learning can be applied to Linux system-level activity by learning patterns from selected event attributes.
 
----
-
-# 🚀 Features
-
-- 🧠 PyTorch Neural Network
-- ⚡ Real-Time Threat Detection
-- 📊 Confidence Score & Probability
-- 🎯 Decision Threshold Display
-- 🚀 FastAPI REST API
-- ☁️ Render Cloud Deployment
-- 💜 Modern Responsive UI
-- 📱 Mobile Friendly
-- 📖 Interactive API Documentation
-
----
-
-# 💡 Why CyberGuard AI?
-
-Modern cyber threats evolve rapidly, making behavioral analysis an important complement to traditional signature-based detection.
-
-CyberGuard AI demonstrates how Machine Learning can assist security analysts by:
-
-- Performing real-time behavioral threat assessment
-- Providing confidence-based predictions
-- Exposing predictions through a production-ready REST API
-- Demonstrating end-to-end Machine Learning deployment
-
-CyberGuard AI is designed as an educational and research project showcasing practical ML Engineering principles.
-
----
-
-# 📚 Dataset Summary
-
-**Dataset**
-
-BETH Cybersecurity Dataset
-
-The model was trained on structured operating system event data representing both benign and malicious behaviors.
-
-Selected features include:
+The classification model uses four structured input features:
 
 - User ID
 - Mount Namespace
 - Arguments Count
-- Operation Return Code
+- Operation Return Value
 
-Features were standardized using **StandardScaler** before training to ensure consistent inference performance.
+A feed-forward neural network developed with PyTorch processes these features and produces a classification prediction alongside a probability score.
+
+The project demonstrates the Machine Learning Engineering lifecycle, covering data preprocessing, neural network development, model inference, API development, and cloud deployment.
+
+---
+
+# 🚀 Key Features
+
+- 🧠 PyTorch Feed-Forward Neural Network
+- 🐧 Linux System-Event Classification
+- 🔍 Benign and Malicious Event Classification
+- 📊 Prediction Probability Scores
+- 🎯 Classification Decision Threshold
+- ⚡ Feature Standardization with Scikit-learn
+- 🚀 FastAPI REST API
+- ☁️ Render Backend Deployment
+- 💻 Interactive Web Interface
+- 📖 API Documentation with Swagger UI
+- 📱 Responsive Frontend
+
+---
+
+# 🎯 Problem Focus
+
+Linux operating systems generate structured system-level activity records containing information about users, namespaces, arguments, and operation results.
+
+Examining these records individually can make it difficult to distinguish ordinary system activity from potentially malicious activity.
+
+Cyber Threat Detector explores the application of supervised machine learning to this classification problem.
+
+Rather than claiming to detect every category of cyberattack, the project focuses on a defined task:
+
+**Using selected Linux system-event attributes to classify individual event records as benign or potentially malicious.**
+
+This provides a practical demonstration of how a trained neural network can be incorporated into a system-event classification workflow.
+
+---
+
+# 📚 Dataset and Input Features
+
+### Dataset
+
+**BETH Cybersecurity Dataset**
+
+The project uses structured operating system event data containing records associated with benign and malicious activity.
+
+The model uses four selected features:
+
+| Feature | Description |
+|---|---|
+| `userId` | User identifier associated with the event |
+| `mountNamespace` | Mount namespace identifier |
+| `argsNum` | Number of arguments associated with the operation |
+| `returnValue` | Return value of the operation |
+
+### Preprocessing
+
+The selected numerical features are standardized using Scikit-learn's `StandardScaler`.
+
+The fitted scaler is saved and reused during inference to ensure incoming records undergo the same feature transformation applied during model development.
+
+---
+
+# 🧠 Model Architecture
+
+The classification model is a feed-forward neural network implemented using **PyTorch**.
+
+### Architecture
+
+| Layer | Configuration |
+|---|---|
+| Input Layer | 4 features |
+| Hidden Layer 1 | 64 neurons + ReLU |
+| Dropout | 0.3 |
+| Hidden Layer 2 | 32 neurons + ReLU |
+| Dropout | 0.3 |
+| Output Layer | 1 neuron |
+
+The model produces a logit that is converted into a probability using the sigmoid activation function.
+
+A classification threshold of **0.5** is applied:
+
+- Probability ≥ 0.5: Malicious
+- Probability < 0.5: Benign
 
 ---
 
 # 📈 Model Performance
 
 | Metric | Score |
-|---------|-------|
+|---|---:|
 | Accuracy | **68.00%** |
 | Precision | **27.78%** |
 | Recall | **31.25%** |
@@ -108,21 +141,39 @@ Features were standardized using **StandardScaler** before training to ensure co
 | Architecture | Feed-Forward Neural Network |
 | Framework | PyTorch |
 
-The model demonstrates an end-to-end deployment workflow for behavioral cyber threat detection.
+These are the reported evaluation results for the current model.
+
+The results also highlight opportunities for improvement in feature selection, model performance, and classification reliability.
 
 ---
 
-# 🛡️ Prediction Classes
+# 🛡️ Prediction Output
 
-- Benign
-- Malicious
+The model returns one of two classification labels:
+
+- **Benign**
+- **Malicious**
+
+Alongside the predicted class, the API returns a probability score representing the model's output for the malicious class.
+
+Example response:
+
+```json
+{
+  "prediction": "Malicious",
+  "probability": 0.5137
+}
+```
+
+The probability is a model output and should not automatically be interpreted as a calibrated measure of real-world threat confidence.
 
 ---
 
 # 🏗️ Technology Stack
 
-### Machine Learning
+### Machine Learning and Data Processing
 
+- Python
 - PyTorch
 - Scikit-learn
 - NumPy
@@ -137,10 +188,10 @@ The model demonstrates an end-to-end deployment workflow for behavioral cyber th
 
 ### Frontend
 
-- Lovable
 - React
 - TypeScript
 - Tailwind CSS
+- Lovable
 
 ### Deployment
 
@@ -151,15 +202,15 @@ The model demonstrates an end-to-end deployment workflow for behavioral cyber th
 # 📂 Project Structure
 
 ```text
-CyberGuard-AI/
+Cyber-Threat-Detector/
 
 ├── app/
 │   ├── main.py
 │   └── model.py
 │
 ├── models/
-│   ├── best_model.pth          # Trained PyTorch model
-│   └── scaler.pkl              # Serialized StandardScaler
+│   ├── best_model.pth
+│   └── scaler.pkl
 │
 ├── images/
 │
@@ -171,7 +222,9 @@ CyberGuard-AI/
 
 ---
 
-# 📡 API
+# 📡 API Documentation
+
+The trained model is exposed through a FastAPI REST API.
 
 ### Health Check
 
@@ -179,13 +232,15 @@ CyberGuard-AI/
 GET /
 ```
 
-### Prediction
+Returns the API health status.
+
+### Classification Endpoint
 
 ```http
 POST /predict
 ```
 
-Input
+Example request:
 
 ```json
 {
@@ -196,7 +251,7 @@ Input
 }
 ```
 
-Returns
+Example response:
 
 ```json
 {
@@ -205,31 +260,43 @@ Returns
 }
 ```
 
+### API Documentation
+
+Explore the interactive API documentation:
+
+[Open Swagger UI](https://cyber-threat-detector-jafo.onrender.com/docs)
+
 ---
 
-# ⚙️ Run Locally
+# ⚙️ Running Locally
 
-Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Rbolarinwa-DS/cyber-threat-detector.git
 ```
 
-Install dependencies
+### 2. Navigate into the project directory
+
+```bash
+cd cyber-threat-detector
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the API
+### 4. Start the API
 
 ```bash
 python -m uvicorn app.main:app --reload
 ```
 
-Open
+### 5. Open the API documentation
 
-```
+```text
 http://127.0.0.1:8000/docs
 ```
 
@@ -237,53 +304,57 @@ http://127.0.0.1:8000/docs
 
 # ⚠️ Current Limitations
 
-Although CyberGuard AI demonstrates a production-ready deployment workflow, there are still limitations.
+Cyber Threat Detector is a proof-of-concept focused on a specific Linux system-event classification task.
 
-- Uses four structured input features
-- Educational proof-of-concept
-- Limited feature engineering
-- No user authentication
-- No prediction history
-- Not intended for production security environments
+Current limitations include:
+
+- Classification is based on four selected input features.
+- The model is limited to the patterns represented in its training data.
+- The model does not independently establish whether a complete system or machine has been compromised.
+- It does not perform intrusion prevention, automated incident response, or malware removal.
+- The current implementation does not establish continuous system monitoring.
+- Further feature engineering and model evaluation are needed to improve classification performance.
+
+The project is intended to demonstrate practical Machine Learning Engineering and model-serving concepts rather than serve as a standalone production security solution.
 
 ---
 
-# 🛣️ Roadmap
+# 🛣️ Development Roadmap
 
-## ✅ Version 1.0
+### Version 1.0 — Current Implementation
 
-- End-to-End Deployment
-- PyTorch Neural Network
-- FastAPI Backend
-- Render Deployment
-- Responsive Frontend
-- Live REST API
+- [x] Dataset-based model development
+- [x] PyTorch neural-network classifier
+- [x] Feature standardization
+- [x] FastAPI inference backend
+- [x] Cloud backend deployment
+- [x] Web-based frontend integration
+- [x] Interactive API documentation
 
-### 🚀 Version 2.0
+### Future Improvements
 
-- Docker Support
-- CI/CD Pipeline
-- User Authentication
-- Prediction History
-- Model Monitoring Dashboard
-- Explainable AI
-- Enhanced Feature Engineering
+- [ ] Expanded Linux system-event feature engineering
+- [ ] Further model evaluation and optimization
+- [ ] Model explainability
+- [ ] Docker containerization
+- [ ] CI/CD integration
+- [ ] Prediction history
+- [ ] Model monitoring and evaluation dashboard
+- [ ] Expanded system-event classification capabilities
 
 ---
 
 # 📜 Disclaimer
 
-CyberGuard AI is intended for **educational, research, and demonstration purposes only.**
+Cyber Threat Detector is developed for educational, research, and demonstration purposes.
 
-Predictions generated by the model should complement—not replace—professional cybersecurity monitoring and incident response practices.
+Its predictions are based on a machine-learning model trained on a particular dataset and a limited set of input features. They should not be treated as definitive evidence of malicious activity or used as a substitute for professional cybersecurity monitoring and investigation.
 
 ---
 
 # ⭐ Support
 
-If you found this project useful, consider giving it a **Star ⭐**.
-
-It helps support the project and motivates future development.
+If you find this project useful, consider giving the repository a **Star ⭐**.
 
 ---
 
@@ -293,4 +364,6 @@ It helps support the project and motivates future development.
 
 Machine Learning Engineer • Data Scientist
 
-Building practical AI solutions from research to deployment.
+Building practical AI and Machine Learning solutions from research to deployment.
+
+[GitHub](https://github.com/Rbolarinwa-DS)
